@@ -35,7 +35,7 @@ const CollegeFootballData = () => {
                     {/* Render the specific properties you want */}
                     {events.map((event) => (
                         <div key={event.id} className='border rounded w-50 p-2 text-center'>
-                            <p>{
+                            <p><a href={event.links[0].href} target='_blank' rel='noreferrer'>{
                                 event.competitions[0].competitors[1].curatedRank.current <= 25 ? (
                                     event.competitions[0].competitors[1].curatedRank.current
                                 ) : (
@@ -46,7 +46,7 @@ const CollegeFootballData = () => {
                                         event.competitions[0].competitors[0].curatedRank.current
                                     ) : (
                                         ''
-                                    )} {event.competitions[0].competitors[0].team.displayName}</p>
+                                    )} {event.competitions[0].competitors[0].team.displayName}</a></p>
                             <p>Odds: {event.competitions[0].odds[0].details}</p>
                             <p>O/U: {event.competitions[0].odds[0].overUnder}</p>
                             {/* Add more properties you want to display */}
