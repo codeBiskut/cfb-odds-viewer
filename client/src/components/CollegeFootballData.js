@@ -34,7 +34,7 @@ const CollegeFootballData = () => {
                 <div className='d-flex flex-row flex-wrap'>
                     {/* Render the specific properties you want */}
                     {events.map((event) => (
-                        <div key={event.id} className='border w-50 p-2 text-center'>
+                        <div key={event.id} className='border rounded w-50 p-2 text-center'>
                             <p>{
                                 event.competitions[0].competitors[1].curatedRank.current <= 25 ? (
                                     event.competitions[0].competitors[1].curatedRank.current
